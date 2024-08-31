@@ -1,0 +1,19 @@
+Зад. 31 2017-SE-06 Напишете скрипт, който ако се изпълнява от root потребителя, намира процесите на
+потребителите, които не са root потребителя и е изпълнено поне едно от следните неща:
+• имат зададена несъществуваща home директория;
+• не са собственици на home директорията си;
+• собственика на директорията не може да пише в нея.
+Ако общото количество активна памет (RSS - resident set size, non-swaped physical memory that a task has
+used) на процесите на даден такъв потребител е по-голямо от общото количество активна памет на
+root потребителя, то скриптът да прекратява изпълнението на всички процеси на потребителя.
+За справка:
+$ p s a u x | h e a d - n 5
+U S E R P I D % C P U % M E M V S Z R S S T T Y S T A T S T A R T T I M E C O M M A N D
+r o o t 1 0 . 0 0 . 0 1 5 8 2 0 1 0 5 2 ? S s A p r 2 1 0 : 0 6 i n i t [ 2 ]
+r o o t 2 0 . 0 0 . 0 0 0 ? S A p r 2 1 0 : 0 0 [ k t h r e a d d ]
+r o o t 3 0 . 0 0 . 0 0 0 ? S A p r 2 1 0 : 0 2 [ k s o f t i r q d / 0 ]
+r o o t 5 0 . 0 0 . 0 0 0 ? S < A p r 2 1 0 : 0 0 [ k w o r k e r / 0 : 0 H ]
+Алтернативно, може да ползвате изхода от p s - e - o u i d , p i d , r s s
+r o o t : x : 0 : 0 : r o o t : / r o o t : / b i n / b a s h
+d a e m o n : x : 1 : 1 : d a e m o n : / u s r / s b i n : / u s r / s b i n / n o l o g i n
+s 6 1 9 3 4 : x : 1 1 7 7 : 5 0 4 : M a r i q C h o l a k o v a : / h o m e / S I / s 6 1 9 3 4 : / b i n / b a s h

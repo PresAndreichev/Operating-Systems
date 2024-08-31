@@ -1,0 +1,6 @@
+Зад. 19 2016-SE-03 Напишете shell скрипт който, ако се изпълнява от root, проверява кои потребители на
+системата нямат homedir или не могат да пишат в него.
+Примерен формат:
+r o o t : x : 0 : 0 : r o o t : / r o o t : / b i n / b a s h
+d a e m o n : x : 1 : 1 : d a e m o n : / u s r / s b i n : / u s r / s b i n / n o l o g i n
+b i n : x : 2 : 2 : b i n : / b i n : / u s r / s b i n / n o l o g i n
